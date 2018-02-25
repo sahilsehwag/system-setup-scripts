@@ -10,16 +10,31 @@
 	brew install wget
 	brew install curl
 #DEVELOPMENT
-	brew install python3
-	brew install node
-	brew install go
-	brew install r
-	brew install rust
-	brew install sqlite
-	brew install jupyter
-	brew install ipython
-	brew install lua
-	#brew install chaiscript
+	#BUILD
+		#DEPENDENCIES
+		brew install cmake
+		brew install gcc
+		brew install mono
+	#LANGUAGES
+		brew install python3
+		brew install node
+		brew install go
+		brew install r
+		brew install rust
+		brew install lua
+		brew install haskell-stack
+		brew cask install java
+		brew cask install processing
+	#PACKAGE MANAGERS
+	#DATABASES
+		brew install sqlite
+	#INTERACTIVE
+		brew install jupyter
+		brew install ipython
+		brew install cling
+		brew install chaiscript
+		brew install ghc
+		brew install javarepl
 #CLI
 	#UTILITIES
 		brew install reattach-to-user-namespace
@@ -31,28 +46,36 @@
 		brew install tree
 		brew install highlight
 		brew install ctags
-		#brew install jq
-		#brew install figlet
-	brew install fasd
-	brew install neovim
-	brew install zsh
-	brew install tmux
-	brew install fzf
-	brew install vifm
-	#brew install task
-	#VIS EDITOR
-		brew install libtermkey
-		brew install ncurses
-		brew install lua
-		brew install tre
-		sudo luarocks install lpeg
-		cd ~
-		git clone https://github.com/martanne/vis
-		cd ~/vis
-		./configure && make && sudo make install
-		cd ../
-		rm -rf ~/vis
-	#brew install cmus
+		brew install jq
+		brew install htop
+		brew install exa
+		brew install cheat
+		brew install thefuck
+		brew install path-extractor
+		#brew install dasht
+	#MISCELLANOUS
+		brew install figlet
+	#APPLICAITONS
+		brew install fasd
+		brew install neovim
+		brew install zsh
+		brew install tmux
+		brew install fzf
+		brew install vifm
+		brew install task
+		brew install cmus
+		#VIS EDITOR
+			brew install libtermkey
+			brew install ncurses
+			brew install lua
+			brew install tre
+			sudo luarocks install lpeg
+			cd ~
+			git clone https://github.com/martanne/vis
+			cd ~/vis
+			./configure && make && sudo make install
+			cd ../
+			rm -rf ~/vis
 #GUI
 	brew cask install iterm2
 	brew cask install dash
@@ -72,3 +95,8 @@
 	#brew cask install macvim
 	#brew cask install foldingtext
 	#brew cask install visual-studio-code
+#LIBRARIES|FRAMEWORKS
+	#PYTHON
+	#GO
+	#LUA
+	#NODE
