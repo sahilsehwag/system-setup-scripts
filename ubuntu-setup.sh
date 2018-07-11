@@ -6,6 +6,7 @@
 		CLOUD=""
 	#COLORS
 		NC='\033[0m'
+	VERBOSE=$1
 #SETUP
 	! type curl     &> /dev/null && sudo apt-get -y install curl
 	! type git      &> /dev/null && sudo apt-get -y install git
@@ -14,13 +15,7 @@
 	! type pip3     &> /dev/null && sudo apt-get -y install python3-pip
 	! type python3  &> /dev/null && sudo apt-get -y install python3-dev
 #HELPERS
-	#LOGGING
-		#function log(){}
-		function print()
-		{
-			echo -e $1
-		}
-
+	#COLOR
 		function color()
 		{
 			if [[ $# -eq 1 ]]; then
@@ -95,6 +90,31 @@
 				code=$code"m"
 				echo $code
 			fi
+		}
+	#LOGGING
+		function log::log()
+		{
+			echo -e $(color BOLD::)LOG: $* $NC
+		}
+		function log::debug()
+		{
+			echo -e $(color BOLD:BLACK:GRAY)DEB: $*$NC
+		}
+		function log::success()
+		{
+			echo -e $(color BOLD:GREEN:)SUC: $* $NC
+		}
+		function log::error()
+		{
+			echo -e $(color BOLD:RED:)ERR: $* $NC
+		}
+		function log::warning()
+		{
+			echo -e $(color BOLD:YELLOW:)WAR: $* $NC
+		}
+		function log::info()
+		{
+			echo -e $(color BOLD:BLUE:)INF: $* $NC
 		}
 #PACKAGES
 	#UTILITIES
