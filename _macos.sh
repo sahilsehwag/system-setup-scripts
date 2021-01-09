@@ -1,4 +1,5 @@
 #! /bin/bash
+
 #VARIABLES
 	DRIVE=~/Google\ Drive
 #HOMEBREW
